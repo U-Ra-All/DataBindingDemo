@@ -2,6 +2,7 @@ package com.android.uraall.databindingdemo;
 
 import androidx.databinding.BaseObservable;
 import androidx.databinding.Bindable;
+import androidx.databinding.library.baseAdapters.BR;
 
 public class Greeting extends BaseObservable {
 
@@ -23,7 +24,7 @@ public class Greeting extends BaseObservable {
 
     public void setSenderName(String senderName) {
         this.senderName = senderName;
-        notifyPropertyChanged(BR.senderNamfe);
+        notifyPropertyChanged(BR.senderName);
     }
 
     @Bindable
