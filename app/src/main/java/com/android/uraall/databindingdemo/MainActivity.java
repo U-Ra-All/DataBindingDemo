@@ -4,10 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.uraall.databindingdemo.databinding.ActivityMainBinding;
 
@@ -71,13 +70,17 @@ public class MainActivity extends AppCompatActivity {
 
         public void onOkClicked(View view) {
 
-            Toast.makeText(context, "Ok", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context, "Ok", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this,
+                    OkActivity.class));
 
         }
 
         public void onCancelClicked(View view) {
 
-            Toast.makeText(context, "Cancel", Toast.LENGTH_SHORT).show();
+//            Toast.makeText(context, "Cancel", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(MainActivity.this,
+                    TwoWayActivity.class));
 
         }
     }
